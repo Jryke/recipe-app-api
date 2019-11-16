@@ -17,6 +17,8 @@ database
 
 // Routes
 app.get('/', (req, res) => res.send('Welcome to Recipe App'))
+app.get('/recipes', require('./controllers/getRecipes.js'))
+app.post('/recipes', require('./controllers/postRecipes.js'))
 
 // Listen
 app.listen(process.env.PORT, () => {
