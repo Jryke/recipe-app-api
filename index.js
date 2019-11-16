@@ -9,6 +9,7 @@ const app = express()
 // Database
 
 // Routes
+app.get('/', (req, res) => res.send('Welcome to Recipe App'))
 
 // Listen
 app.listen(process.env.PORT, () => {
