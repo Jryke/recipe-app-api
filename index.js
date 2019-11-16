@@ -1,11 +1,15 @@
 const express = require('express')
+const bodyParser = require('body-parser')
+const cors = require('cors')
 require('dotenv').config()
 
 // Express
 const app = express()
 
 // Middleware
-
+app.use(bodyParser.urlencoded({extend: false}))
+app.use(bodyParser.json())
+app.use(cors({credentials: true}))
 // Database
 
 // Routes
