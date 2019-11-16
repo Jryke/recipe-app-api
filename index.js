@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
+const database = require('./database')
 require('dotenv').config()
 
 // Express
@@ -10,7 +11,9 @@ const app = express()
 app.use(bodyParser.urlencoded({extend: false}))
 app.use(bodyParser.json())
 app.use(cors({credentials: true}))
+
 // Database
+database
 
 // Routes
 app.get('/', (req, res) => res.send('Welcome to Recipe App'))
